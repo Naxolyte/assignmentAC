@@ -1,0 +1,12 @@
+<template>
+    <lightning-card icon-name="utility:water" title="Weather" > 
+        <div class="weather-container" if:false={invalidCity}>
+            <div class="weather-header" >Tomorrow in {city}:</div>
+            <div class="weather-details">
+                <div class="weather-temperature">{temperature}°C</div>
+                <div class="weather-description">{description}</div>
+            </div>
+        </div>
+        <div class="error" if:true={invalidCity}>The record doesn't have a valid City.</div>
+    </lightning-card>
+</template>
