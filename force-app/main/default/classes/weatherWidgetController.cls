@@ -43,7 +43,6 @@ public with sharing class weatherWidgetController {
 
    public static String getKey(){
     Weather_API_Key__mdt metadata = [SELECT Value FROM Weather_API_Key__mdt LIMIT 1];
-    //String key = '55cdfffd9a497e0ceb696883c45f26e3'; 
     String output = '&appid=' + metadata.Value__c;
     return output;
    }
